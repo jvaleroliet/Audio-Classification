@@ -65,7 +65,7 @@ if __name__=="__main__":
 		class_audio = []
 		for root, dirs, files in os.walk(class_dir):
 			for file in files:
-				if file.endswith('.wav'):
+				if file.endswith('.mp3'):
 					class_audio.append({"name":os.path.join(root, file), "class_idx": class_names.index(_class)})
 
 		training_audios.extend(class_audio[:int(len(class_audio)*4/5)])
